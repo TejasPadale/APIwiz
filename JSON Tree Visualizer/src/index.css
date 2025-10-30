@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Base layout styling */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  @apply font-sans transition-colors duration-300 ease-in-out;
+}
+
+/* Light mode */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Dark mode */
+body.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded;
+}
+body.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+}
+
+/* Node hover animation */
+.react-flow__node {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.react-flow__node:hover {
+  transform: scale(1.03);
+}
